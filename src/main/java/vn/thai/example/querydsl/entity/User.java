@@ -9,66 +9,64 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
-    private String firstName;
-    private String lastName;
-    private String email;
+  private String firstName;
+  private String lastName;
+  private String email;
+  private Date birthDay;
+  private int age;
 
-    public Date getBirthDay() {
-        return birthDay;
-    }
+  public Date getBirthDay() {
+    return birthDay;
+  }
 
-    public void setBirthDay(Date birthDay) {
-        this.birthDay = birthDay;
-    }
+  public void setBirthDay(Date birthDay) {
+    this.birthDay = birthDay;
+    this.age = 11;
+  }
 
-    private Date birthDay;
+  // standard getters and setters
 
-    private int age;
+  public Long getId() {
+    return id;
+  }
 
-    // standard getters and setters
+  public void setId(Long id) {
+    this.id = id;
+  }
 
+  public String getFirstName() {
+    return firstName;
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public String getLastName() {
+    return lastName;
+  }
 
-    public String getFirstName() {
-        return firstName;
-    }
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+  public String getEmail() {
+    return email;
+  }
 
-    public String getLastName() {
-        return lastName;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+  public int getAge() {
+    return age;
+  }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
+  public void setAge(int age) {
+    this.age = age;
+  }
 }
